@@ -1,0 +1,162 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Gallery styling */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    gap: 0;
+    background-color: black;
+    height: 100vh;
+    
+}
+
+.thumbnail {
+    
+    position: relative;
+    margin: 0;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+h2{
+    font-size: 20px;
+}
+
+/* Description styling */
+.description {
+    
+    width: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 18px;
+    margin-left: 20px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.hover-info {
+    display: none;
+    color: purple;
+    font-size: 14px;
+    margin-top: 10px;
+    color: rgb(58, 191, 228);
+}
+.thumbnail:hover img, .hover-info {
+    transition-delay: 500ms;
+}
+
+/* Hover effects */
+.thumbnail:hover img  {
+    filter: blur(3px); 
+    transform: scale(1.03);
+}
+
+.thumbnail:hover .hover-info {
+    display: block;
+    transform: scale(1.03);
+}
+
+/* Full-size image overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+p{
+    margin-top: 5px;
+    font-size: 15px;
+    color: rgb(207, 205, 205);
+    font-family: sans-serif;
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.overlay-content {
+    position: relative;
+}
+
+.overlay-description {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px black;
+    text-align: left;
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Show overlay */
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .thumbnail img {
+        width: auto;
+    }
+    .gallery {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 0;
+        background-color: rgb(12, 7, 7);
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .thumbnail {
+        width: auto;
+    }
+    
+    .thumbnail img {
+        width: 100%;
+        height: 50vh;
+        /*display:block ;*/
+    }
+
+    h2{
+        font-size: 14px;
+    }
+}

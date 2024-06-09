@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <div class="gallery">
+        <div class="thumbnail sameHoVerEffect" data-description="India" data-title="FENNEC FOX">
+            <img src="./images/original1.jpeg" alt="Image 1">
+            <div class="description sameHoVerEffect">
+                <h2>FENNEC</h2>
+                <h2>FOX</h2>
+                <p>India</p>
+                <span class="hover-info">Know more &#8594;</span>
+            </div>
+        </div>
+        <div class="thumbnail sameHoVerEffect" data-description="India" data-title="HUMPBACK WHALE">
+            <img src="./images/originalDolfin2.jpeg" alt="Image 2">
+            <div class="description sameHoVerEffect">
+                <h2>HUMPBACK</h2>
+                <h2>WHALE</h2>
+                <p>India</p>
+                <span class="hover-info">Know more &#8594;</span>
+            </div>
+        </div>
+        <div class="thumbnail sameHoVerEffect" data-description="South Africa" data-title="COMMON BROWN BABOON">
+            <img src="./images/originalBaBUNI3.jpeg" alt="Image 3">
+            <div class="description sameHoVerEffect">
+                <h2>COMMON BROWN</h2>
+                <h2>BABOON</h2>
+                <p>South Africa</p>
+                <span class="hover-info">Know more &#8594;</span>
+            </div>
+        </div>
+        <div class="thumbnail" data-description="Amazon" data-title="SPOTTED DEER">
+            <img src="./images/originalDEER.jpeg" alt="Image 4">
+            <div class="description SPOTTED">
+                <h2>SPOTTED</h2>
+                <h2>DEER</h2>
+                <p>Amazon</p>
+                <span class="hover-info">Know more &#8594;</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <span id="close-button" class="close-button">&times;</span>
+        <img id="full-image" src="" alt="Full Size">
+        <div id="overlay-description" class="overlay-description"></div>
+    </div>
+
+    <script src="./script/index.js"></script>
+</body>
+</html>
